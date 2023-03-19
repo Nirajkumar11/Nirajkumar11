@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Nirajkumar11
 - 👀 I’m interested in software development
-- 🌱 I’m currently learning python
+- 🌱 I’m currently learning Dart
 
 
 
