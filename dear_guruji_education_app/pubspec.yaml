@@ -58,8 +58,9 @@ dev_dependencies:
   provider: ^6.0.5
   intl: ^0.19.0
   json_annotation: ^4.9.0
-  connectivity: ^3.0.3
-
+  #connectivity: ^3.0.3
+  connectivity_plus: ^5.0.2
+  permission_handler: ^11.3.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -73,9 +74,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+
+  assets:
+    - assets/images/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -102,3 +104,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+  fonts:
+    - family: Ageo Persona
+      fonts:
+        - asset: assets/fonts/ageo/AgeoPersonalUse-Bold.otf

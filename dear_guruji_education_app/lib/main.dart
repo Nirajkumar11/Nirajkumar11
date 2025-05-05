@@ -1,3 +1,4 @@
+import 'package:dear_guruji_education_app/resourse/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'constants/theme.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Dear Guru Ji',
       theme: theme(),
       //home: ShowRoutesScreen(),
-     // getPages: AppRoutes.appRoutes(),
+      getPages: AppRoutes.appRoutes(),
     );
 
   }

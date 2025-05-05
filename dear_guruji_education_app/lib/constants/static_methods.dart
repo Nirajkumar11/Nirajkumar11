@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
-import 'package:connectivity/connectivity.dart';
 import 'package:intl/intl.dart';
 
 class StaticMethod{
@@ -66,14 +65,14 @@ class StaticMethod{
 
   }
 
-  static Future<bool> checkInternetConnectivity() async {
+  /*static Future<bool> checkInternetConnectivity() async {
     var connectivityResult = await (Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.none) {
       return false;
     } else {
       return true;
     }
-  }
+  }*/
 
   static Uint8List stringToDecodeBase64(String? base64String) {
     try {
