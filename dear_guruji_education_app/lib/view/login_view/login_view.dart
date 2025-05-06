@@ -1,3 +1,4 @@
+import 'package:dear_guruji_education_app/view/login_view/registration_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -282,12 +283,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 bottom: 20,
                 child: GestureDetector(
                   onTap: () {
-                    /*  Get.to(RegisterScreen(),
+                      Get.to(RegisterScreen(),
                         transition: Transition.rightToLeftWithFade,
-                        duration: Duration(seconds: 1));*/
+                        duration: Duration(seconds: 1));
                   },
                   child: Visibility(
-                    visible: false,
+                    visible: true,
                     child: Container(
                       margin: EdgeInsets.only(top: 16.0),
                       child: RichText(

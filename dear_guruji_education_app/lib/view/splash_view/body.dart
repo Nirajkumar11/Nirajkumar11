@@ -64,13 +64,13 @@ class _BodyState extends State<Body> {
       children: [
         // Background Image
         Image.asset(
-          "assets/images/splash_background_image2.jpg",
+          "assets/images/splash_screen.jpg",
           width: double.infinity,
           height: double.infinity,
           fit: BoxFit.cover,
         ),
         Positioned(
-          top: size * .15,
+          top: size * .170,
           left: 0,
           right: 0,
           child: Center(
@@ -79,17 +79,46 @@ class _BodyState extends State<Body> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  padding: EdgeInsets.all(5),
-                  color: Color.fromARGB(100, 22, 44, 33),
-                  child: Text(
-                    "Dear Guru Ji",
-                    style: TextStyle(
-                      color: AllColors.whiteColor,
-                      fontSize: 38,
-                      fontFamily: "Ageo Persona",
-                      //  decoration: TextDecoration.underline,
-                      // backgroundColor: Color.fromARGB(100, 22, 44, 33),
-                    ),
+                margin: EdgeInsets.all(8.0),
+                width: 180,
+                // Set the desired container width
+                height: 180,
+                // Set the desired container height
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(121, 22, 44, 33),
+                  border: Border.all(color: Colors.white10, width: .5),
+                  borderRadius: BorderRadius.circular(100.0),
+                ),
+                child: Center(
+                  child: Container(
+                    width: 120, // Set the desired image width
+                    height: 120,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: logoImage,
+                            fit: BoxFit.fill)), // Set the desired image height
+                  ),
+                ),
+              ),
+
+                Text(
+                  "Dear Guru Ji",
+                  style: TextStyle(
+                    color: AllColors.whiteColor,
+                    fontSize: 38,
+                    fontFamily: "Ageo Persona",
+                    //  decoration: TextDecoration.underline,
+                    // backgroundColor: Color.fromARGB(100, 22, 44, 33),
+                  ),
+                ),
+                Text(
+                  "Educational App",
+                  style: TextStyle(
+                    color: AllColors.whiteColor,
+                    fontSize: 20,
+                    fontFamily: "Ageo Persona",
+                    //  decoration: TextDecoration.underline,
+                    // backgroundColor: Color.fromARGB(100, 22, 44, 33),
                   ),
                 ),
               ],
@@ -97,35 +126,11 @@ class _BodyState extends State<Body> {
           ),
         ),
 
-        Center(
-          child: Container(
-            margin: EdgeInsets.all(8.0),
-            width: 180,
-            // Set the desired container width
-            height: 180,
-            // Set the desired container height
-            decoration: BoxDecoration(
-              color: Color.fromARGB(121, 22, 44, 33),
-              border: Border.all(color: Colors.white10, width: .5),
-              borderRadius: BorderRadius.circular(100.0),
-            ),
-            child: Center(
-              child: Container(
-                width: 120, // Set the desired image width
-                height: 120,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: logoImage,
-                        fit: BoxFit.fill)), // Set the desired image height
-              ),
-            ),
-          ),
-        ),
 
         Positioned(
             bottom: 60,
-            left: 20.0,
-            right: 20.0,
+            left: 50.0,
+            right: 50.0,
             child: OutlinedButton(
               onPressed: () async {
                // bool locationPermissionGranted = await checkLocationPermission();
@@ -140,7 +145,8 @@ class _BodyState extends State<Body> {
 
                 // Get.toNamed(RoutesName.loginScreen);
               },
-              child: const Text('Get Started',style: TextStyle(fontSize: 20),),
+              child: const Text('Lets Learn...',
+                style: TextStyle(fontSize: 20),),
               style: OutlinedButton.styleFrom(
                 foregroundColor: AllColors.whiteColor, side: BorderSide(
                   width: 1.0, color: Color.fromARGB(121, 22, 44, 33)),
