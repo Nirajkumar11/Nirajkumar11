@@ -31,7 +31,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
       body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage("assets/images/splash_screen.jpg"), fit: BoxFit.fill)
+            image: DecorationImage(
+                image: AssetImage("assets/images/splash_screen.jpg"), fit: BoxFit.fill)
           ),
           width: double.infinity,
           height: double.infinity,
@@ -39,15 +40,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
             alignment: Alignment.center,
             children: <Widget>[
 
-              Positioned(
+              /*Positioned(
                   top: 40,
                   left: 15.0,
                   child: CircleBackButton(
                     press:(){
                       Get.back();
                     },
-                  )),
-              Positioned(
+                  )),*/
+              /*Positioned(
                 top: 80,
                 child: Column(
                   children: [
@@ -70,8 +71,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             fontStyle: FontStyle.normal)),
                   ],
                 ),
-              ),
-              Positioned(
+              ),*/
+              /*Positioned(
                 top: 170, // Adjust the vertical position as needed
                 left: 20,
                 right: 20,
@@ -162,7 +163,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     SizedBox(height: SizeConfig.screenHeight * 0.08),
                     // Add Login button
-                    /* Positioned(
+                    *//* Positioned(
                       bottom: 60,
                       child: DefaultButton(
                         text: "Sign Up",
@@ -171,7 +172,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         },
                       ),
 
-                    ),*/
+                    ),*//*
                   ],
                 ),
               ),
@@ -208,7 +209,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
               ),
-            ],
+*/            ],
           ),
         ),
       ),
