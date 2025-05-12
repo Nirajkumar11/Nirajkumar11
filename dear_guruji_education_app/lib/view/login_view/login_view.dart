@@ -7,6 +7,7 @@ import '../../components/back_button.dart';
 import '../../components/default_button.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/app_font_size.dart';
+import '../../resourse/routes/routes_name.dart';
 import '../../utils/app_utils.dart';
 import '../../view_model/login_viewModel/login_view_model.dart';
 
@@ -223,10 +224,11 @@ class _LoginScreenState extends State<LoginScreen> {
                            return DefaultButton(
                              text: "Login",
                              press: () {
-                               if (_formKey.currentState!.validate()) {
-                                 // loginVM.loading.value = true;
-                                 // loginVM.loginApi();
-                               }
+                               /*if (_formKey.currentState!.validate()) {
+                                  loginVM.loading.value = true;
+                                  loginVM.loginApi();
+                               }*/
+                               Get.offAllNamed(RoutesName.homeScreen);
                              },
                              loading: loginVM.loading.value,
                            );

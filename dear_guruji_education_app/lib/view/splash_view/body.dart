@@ -25,9 +25,9 @@ class _BodyState extends State<Body> {
 
   @override
   void didChangeDependencies() async{
-    backgroundImage = AssetImage("assets/images/splash_background_image.jpg");
+    backgroundImage = AssetImage("assets/images/logo-removebg-preview.png");
     //logoImage = AssetImage("assets/images/pristine_pfulfilll.png");
-    logoImage = AssetImage("assets/images/pristine_pfulfil.png");
+    logoImage = AssetImage("assets/images/logo-removebg-preview.png");
     await precacheImage(backgroundImage,context);
     await precacheImage(logoImage,context);
     super.didChangeDependencies();
@@ -96,7 +96,7 @@ class _BodyState extends State<Body> {
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: logoImage,
-                            fit: BoxFit.fill)), // Set the desired image height
+                            fit: BoxFit.cover)), // Set the desired image height
                   ),
                 ),
               ),

@@ -3,6 +3,7 @@ class RoutesName{
   static const splashScreen="/";
   static const loginScreen="/login_view.dart";
   static const registerScreen="/registration_page.dart";
+  static const homeScreen="/Home_view.dart";
 
 
 }
