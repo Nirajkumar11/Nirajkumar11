@@ -78,13 +78,12 @@ class _HomePageScreenState extends State<HomePageScreen> {
             .copyWith(iconTheme: IconThemeData(color: Colors.white)),
         child: CurvedNavigationBar(
           items: [
-            Image.asset("assets/images/pristine_pfulfilll.png",height: 33,width: 33,),
 
-            /*Icon(
+            Icon(
               Icons.dashboard,
               size: 30,
               color: Colors.white,
-            ),*/
+            ),
             Icon(Icons.menu, size: 30),
             Stack(children: [
               Icon(Icons.notifications, size: 30),

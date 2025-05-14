@@ -5,7 +5,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:loop_page_view/loop_page_view.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/app_font_size.dart';
 import '../../view_model/dashBoard_viewModel/DashBoard_Vm.dart';
@@ -61,7 +60,7 @@ class DashBoardScreen extends StatelessWidget{
                                 boxShadow: [
                                   BoxShadow(
                                       color: AllColors.whiteColor
-                                          .withOpacity(0.5),
+                                          .withValues(alpha: 0.5),
                                       spreadRadius: 10,
                                       blurRadius: 0,
                                       offset: Offset(0, 3),
@@ -104,25 +103,19 @@ class DashBoardScreen extends StatelessWidget{
                             ),
                           )
                         ),
-                        Positioned(
-                          top: 110,
-                          left: 80,
-                          child: SizedBox(
-                            height: 100,
-                            width: size.width * 0.6,
-                            child: PageView.builder(
-                              controller: DashBoardVMController.pageController,
-                             // itemCount: 5,
-                              itemBuilder: (context, index) {
-                                final displayIndex = index % DashBoardVMController.itemCount;
-                                return Center(
-                                  child: Text('Page $displayIndex', style: TextStyle(
-                                    color: Colors.black
-                                  ),),
-                                );
-                              },
-                            ),
-                          ),
+                        PageView.builder(
+                          controller: DashBoardVMController.pageController,
+                         // itemCount: 5,
+                          itemBuilder: (context, index) {
+                            final displayIndex = index % DashBoardVMController.imgList.length;
+                            return Center(
+                              child: Container(
+                                margin: EdgeInsets.only(top: 100),
+                                height: size.width*.5,
+                                  width: size.width*.8,
+                                  child: DashBoardVMController.imgList[displayIndex])
+                            );
+                          },
                         )
                       ],
                     ),
@@ -130,9 +123,65 @@ class DashBoardScreen extends StatelessWidget{
 
                 ],
               ),
+              Padding(
+                padding: const EdgeInsets.only(right: 208.0,top: 5),
+                child: Text(
+                  "What are you looking for? ",
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: AllFontSize.fourtine,
+                  ),
+                ),
+              ),
 
-            ],
+              Container(
+                height: size.height*.45,
+                width: double.infinity,
+                child: GridView(
+                  padding: const EdgeInsets.all(16.0),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 1.5,
+                    crossAxisSpacing: 16.0,
+                    mainAxisSpacing: 16.0,
+                  ),
+                  children: DashBoardVMController.imageDataList.map((imageData) {
+                    return Container(
+                      padding: const EdgeInsets.all(18.0),
+                      decoration: BoxDecoration(
+                        color: DashBoardVMController.getRandomColor(),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            imageData.description,
+                            style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                          const SizedBox(height: 8),
+                          Container(
+                              height: 35,
+                              width: 35,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50)
+                              ),
+                              child: Image.asset(imageData.imagePath)),
+                        ],
+                      ),
+                    );
+                  }).toList(),
+
           ),
+        )
+            ],
+        ),
         ),
       ),
     );
@@ -140,3 +189,4 @@ class DashBoardScreen extends StatelessWidget{
   
   
 }
+
