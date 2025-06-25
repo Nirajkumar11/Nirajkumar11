@@ -111,7 +111,7 @@ class DashBoardScreen extends StatelessWidget{
                             return Center(
                               child: Container(
                                 margin: EdgeInsets.only(top: 100),
-                                height: size.width*.5,
+                                height: size.width*.45,
                                   width: size.width*.8,
                                   child: DashBoardVMController.imgList[displayIndex])
                             );
@@ -124,7 +124,7 @@ class DashBoardScreen extends StatelessWidget{
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 208.0,top: 5),
+                padding: const EdgeInsets.only(right: 20.0,top: 5,left:15),
                 child: Text(
                   "What are you looking for? ",
                   style: GoogleFonts.poppins(
@@ -167,8 +167,8 @@ class DashBoardScreen extends StatelessWidget{
                           ),
                           const SizedBox(height: 8),
                           Container(
-                              height: 35,
-                              width: 35,
+                              height: 30,
+                              width: 30,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50)
                               ),

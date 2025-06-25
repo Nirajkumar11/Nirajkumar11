@@ -37,36 +37,72 @@ class DashBoardViewModel extends GetxController {
     ImageData(
       imagePath: "assets/images/customer.png",
       name: "Image 2",
-      description: "This is the second image.",
+      description: "IGNOU",
     ),
     ImageData(
       imagePath: "assets/images/customer.png",
       name: "Image 2",
-      description: "This is the second image.",
+      description: "Govt. Jobs (Non Teaching)",
     ),
     ImageData(
       imagePath: "assets/images/customer-support.png",
       name: "Image 4",
-      description: "This is the first image.",
+      description: "B.Ed. Entrance & B.Ed. Special",
     ),
     ImageData(
       imagePath: "assets/images/distributor_ipt.png",
       name: "Image 5",
-      description: "This is the second image.",
-    ),    ImageData(
+      description: "CTET/S-TET",
+    ),
+    ImageData(
       imagePath: "assets/images/ipt_list.png",
       name: "Image 6",
-      description: "This is the first image.",
+      description: "CUET UG & PG Entrance",
     ),
     ImageData(
       imagePath: "assets/images/event_management.png",
       name: "Image 7",
-      description: "This is the second image.",
+      description: "NCET ITEP: 4 Year B.Ed",
     ),
     ImageData(
       imagePath: "assets/images/distributor_ipt.png",
       name: "Image 8",
-      description: "This is the first image.",
+      description: "UGC NET JRF",
+    ),
+
+    // add more images here...
+  ];
+
+  List<ImageData> menuBottomList = [
+    ImageData(
+      imagePath: "assets/images/collections.png",
+      name: "Image 1",
+      description: "Teaching Jobs & DSSSB.",
+    ),
+    ImageData(
+      imagePath: "assets/images/customer.png",
+      name: "Image 2",
+      description: "IGNOU",
+    ),
+    ImageData(
+      imagePath: "assets/images/customer.png",
+      name: "Image 2",
+      description: "Govt. Jobs (Non Teaching)",
+    ),
+    ImageData(
+      imagePath: "assets/images/customer-support.png",
+      name: "Image 4",
+      description: "B.Ed. Entrance & B.Ed. Special",
+    ),
+    ImageData(
+      imagePath: "assets/images/distributor_ipt.png",
+      name: "Image 5",
+      description: "CTET/S-TET",
+    ),
+    ImageData(
+      imagePath: "assets/images/ipt_list.png",
+      name: "Image 6",
+      description: "CUET UG & PG Entrance",
     ),
 
     // add more images here...
